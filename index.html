@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dropmorphism</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+            background-color: rgb(40, 40, 40);
+        }
+        .full{
+            
+  position: relative;
+
+        }
+        h1{
+            color:aliceblue;
+            font-size: 80px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            line-height: 0;
+            letter-spacing: 10px;
+        }
+        .text {
+  display: grid;
+  place-items: center;
+}
+
+
+.drop {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background: rgb(40, 40, 40);
+  border-radius: 51% 49% 48% 52% / 62% 44% 56% 38%;
+  opacity: 0.8;
+  border: 2px solid rgb(40, 40, 40);
+}
+
+.drop::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgb(40, 40, 40);
+  border-radius: 51% 49% 48% 52% / 62% 44% 56% 38%;
+  box-shadow: -20px 30px 16px rgba(255, 255, 255, 0.2), -40px 60px 32px rgba(109, 109, 109, 0.2), inset -6px 6px 10px rgba(255, 255, 255, 0.2),
+    inset 2px 6px 10px rgba(196, 196, 196, 0.4), inset 20px -20px 22px rgba(176, 176, 176, 0.8), inset 40px -40px 44px rgba(173, 173, 173, 0.8);
+}
+
+.drop::after {
+  content: '';
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background: #f1fffe; 
+  border-radius: 44% 56% 46% 54% / 36% 50% 50% 64%;
+  left: 130px;
+  top: 40px;
+  box-shadow: 16px 40px 0 -10px rgba(255, 255, 255, 0.8);
+  opacity: 0.8;
+}
+
+
+.dre1 {
+  left: -175px;
+  top: -50px;
+}
+
+.dre2 {
+  right: -140px;
+  bottom: -50px;
+  
+  border-radius: 46% 50% 39% 54% / 56% 57% 50% 50%;
+}
+
+.dre2::before {
+  border-radius: 46% 50% 39% 54% / 56% 57% 50% 50%;
+}
+
+    </style>
+    </head>
+    <body>
+        <div class="full">
+            <div class="drop dre1"></div>
+            <div class="drop dre2"></div>
+            <div class="text">
+                <h1>Apple<i class="fa-brands fa-apple"></i></h1>
+            </div>
+        </div>
+
+    </body>
+    </html>
